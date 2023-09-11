@@ -1,0 +1,37 @@
+{
+  "name": "regexp-ranged-exec",
+  "repository": "github:fabiospampinato/regexp-ranged-exec",
+  "description": "Generate an enhanced exec function, with provides information about the range of text that the regex paid attention to.",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "benchmark": "tsex benchmark",
+    "benchmark:watch": "tsex benchmark --watch",
+    "clean": "tsex clean",
+    "compile": "tsex compile",
+    "compile:watch": "tsex compile --watch",
+    "test": "tsex test",
+    "test:watch": "tsex test --watch",
+    "prepublishOnly": "tsex prepare"
+  },
+  "keywords": [
+    "regexp",
+    "regex",
+    "range",
+    "exec",
+    "caching",
+    "memoization"
+  ],
+  "dependencies": {
+    "regjsparser": "^0.10.0"
+  },
+  "devDependencies": {
+    "benchloop": "^2.1.1",
+    "fava": "^0.3.1",
+    "tsex": "^3.0.1",
+    "typescript": "^5.2.2"
+  }
+}
