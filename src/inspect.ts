@@ -59,8 +59,6 @@ const inspect = ( re: RegExp ): Metadata => {
 
       const [start, end] = node.range;
 
-      console.log({start, end});
-
       if ( ( !metadata.HAS_FULL_CAPTURING_GROUP && ( start === 0 && ( end === re.source.length || end === re.source.length - 1 ) ) ) || ( metadata.HAS_FULL_CAPTURING_GROUP && ( start === 1 && ( end === re.source.length - 1 || end === re.source.length - 2 ) ) ) ) { //TODO: Support quantifiers longer than 1 character too, like {1,3}
 
         metadata.HAS_FULL_CHARACTERS_CLASS = true;
