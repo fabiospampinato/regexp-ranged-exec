@@ -25,7 +25,7 @@ import getRangedExec from 'regexp-ranged-exec';
 // You can create an enhanced "exec" function like this
 
 const input = 'some aaa input';
-const re = /aaa/;
+const re = /([a]+)/;
 const exec = getRangedExec ( re );
 const execution = exec ( input );
 
