@@ -11,7 +11,8 @@ const clamp = ( number: number, lower: number, upper: number ): number => {
 
 const getClampedLeftOffsetTo = ( string: string, index: number, char: string ): number => {
 
-  const charIndex = clamp ( getNormalizedLeftIndexTo ( string, Math.max ( 0, index - 1 ), char ), 0, string.length );
+  const indexPrev = Math.max ( 0, index - 1 );
+  const charIndex = clamp ( getNormalizedLeftIndexTo ( string, indexPrev, char ), 0, string.length );
   const charOffset = ( index - charIndex );
 
   return charOffset;
@@ -20,7 +21,8 @@ const getClampedLeftOffsetTo = ( string: string, index: number, char: string ): 
 
 const getClampedRightOffsetTo = ( string: string, index: number, char: string ): number => {
 
-  const charIndex = clamp ( getNormalizedRightIndexTo ( string, Math.min ( string.length, index + 1 ), char ), 0, string.length );
+  const indexNext = Math.min ( string.length, index + 1 );
+  const charIndex = clamp ( getNormalizedRightIndexTo ( string, indexNext, char ), 0, string.length );
   const charOffset = ( charIndex - index );
 
   return charOffset;
@@ -51,4 +53,4 @@ const isRegExp = ( value: unknown ): value is RegExp => {
 
 /* EXPORT */
 
-export {getClampedLeftOffsetTo, getClampedRightOffsetTo, isRegExp};
+export {getClampedLeftOffsetTo, getClampedRightOffsetTo, getNormalizedLeftIndexTo, getNormalizedRightIndexTo, isRegExp};
