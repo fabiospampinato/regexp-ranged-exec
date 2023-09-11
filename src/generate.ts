@@ -33,7 +33,7 @@ const generate = ( re: RegExp ): RegExpRangedExec => {
       const result = re.exec ( string );
 
       const left = 0;
-      const right = result ? result.index + result[1].length + 1 : getClampedRightOffsetTo ( string, index, '\n' ) + 1;
+      const right = result ? ( result.index - index ) + result[1].length + 1 : getClampedRightOffsetTo ( string, index, '\n' ) + 1;
       const range: Range = [left, right];
 
       return {result, range};
