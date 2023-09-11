@@ -2,7 +2,7 @@
   "name": "regexp-ranged-exec",
   "repository": "github:fabiospampinato/regexp-ranged-exec",
   "description": "Generate an enhanced exec function, with provides information about the range of text that the regex paid attention to.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
