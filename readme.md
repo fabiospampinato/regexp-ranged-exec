@@ -9,7 +9,7 @@ This is useful for caching the result of a regex, or a series of regexes, when t
 - The calculated range is a conservative estimate and it's not precise for every regex.
 - Regexes that capture everything, and have a single character class inside them, optionally followed by a quantifier, a character or a dot, produce the most precise ranges.
 - Regexes that never match "\n" produce a range that is roughly the one containing the line that contains the index that the regex started matching from.
-- All other regexes will give you a completely useless range.
+- All other regexes will give you a useless range, one enclosing the whole input.
 
 ## Install
 
